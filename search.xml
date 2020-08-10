@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>python批量爬取网页图片</title>
+    <url>/2020/08/09/python%E6%89%B9%E9%87%8F%E7%88%AC%E5%8F%96%E7%BD%91%E9%A1%B5%E5%9B%BE%E7%89%87/</url>
+    <content><![CDATA[<h2 id="python3爬虫小项目"><a href="#python3爬虫小项目" class="headerlink" title="python3爬虫小项目"></a>python3爬虫小项目</h2><a id="more"></a>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#第一步：获取要爬取的母网页的内容</span></span><br><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://www.baidu.com&quot;</span></span><br><span class="line">webPage=urllib.request.urlopen(url)</span><br><span class="line">data = webPage.read()</span><br><span class="line">data = data.decode(<span class="string">&#x27;UTF-8&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#第二步：对母网页内容处理，提取出里面的图片链接</span></span><br><span class="line">k = re.split(<span class="string">r&#x27;\s+&#x27;</span>,data)</span><br><span class="line">s = []</span><br><span class="line">sp = []</span><br><span class="line">si = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> k :</span><br><span class="line">    <span class="keyword">if</span> (re.match(<span class="string">r&#x27;src&#x27;</span>,i) <span class="keyword">or</span> re.match(<span class="string">r&#x27;href&#x27;</span>,i)):</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">not</span> re.match(<span class="string">r&#x27;href=&quot;#&quot;&#x27;</span>,i)):</span><br><span class="line">            <span class="keyword">if</span> (re.match(<span class="string">r&#x27;.*?png&quot;&#x27;</span>,i) <span class="keyword">or</span> re.match(<span class="string">r&#x27;.*?ico&quot;&#x27;</span>,i)):</span><br><span class="line">                <span class="keyword">if</span> (re.match(<span class="string">r&#x27;src&#x27;</span>,i)):</span><br><span class="line">                    s.append(i)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> it <span class="keyword">in</span> s :</span><br><span class="line">    <span class="keyword">if</span> (re.match(<span class="string">r&#x27;.*?png&quot;&#x27;</span>,it)):</span><br><span class="line">        sp.append(it)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#第三步：获取这些图片链接的内容，并保存成本地图片</span></span><br><span class="line">cnt = <span class="number">0</span></span><br><span class="line">cou = <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> it <span class="keyword">in</span> sp:</span><br><span class="line">    m = re.search(<span class="string">r&#x27;src=&quot;(.*?)&quot;&#x27;</span>,it)</span><br><span class="line">    iturl = m.group(<span class="number">1</span>)</span><br><span class="line">    print(iturl)</span><br><span class="line">    <span class="keyword">if</span> (iturl[<span class="number">0</span>]==<span class="string">&#x27;/&#x27;</span>):</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    web = urllib.request.urlopen(iturl)</span><br><span class="line">    itdata = web.read()</span><br><span class="line">    <span class="keyword">if</span> (cnt%<span class="number">3</span>==<span class="number">1</span> <span class="keyword">and</span> cnt&gt;=<span class="number">4</span> <span class="keyword">and</span> cou&lt;=<span class="number">30</span>):</span><br><span class="line">        f = open(<span class="string">&#x27;e:/0.0/py_files/image/&#x27;</span>+str(cou)+<span class="string">&#x27;.png&#x27;</span>,<span class="string">&quot;wb&quot;</span>)</span><br><span class="line">        cou = cou+<span class="number">1</span></span><br><span class="line">        f.write(itdata)</span><br><span class="line">        f.close()</span><br><span class="line">        print(it)</span><br><span class="line">    cnt = cnt+<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++实现计算器</title>
     <url>/2020/08/09/C-%E5%AE%9E%E7%8E%B0%E8%AE%A1%E7%AE%97%E5%99%A8/</url>
     <content><![CDATA[<p>C++实现简易计算器</p>
@@ -10,7 +25,7 @@
 
 ]]></content>
       <categories>
-        <category>C++</category>
+        <category>编程</category>
       </categories>
       <tags>
         <tag>C++</tag>
@@ -24,46 +39,27 @@
 <p> C++是C语言的继承，它既可以进行C语言的过程化程序设计，又可以进行以抽象数据类型为特点的基于对象的程序设计，还可以进行以继承和多态为特点的面向对象的程序设计。C++擅长面向对象程序设计的同时，还可以进行基于过程的程序设计，因而C++就适应的问题规模而论，大小由之。C++不仅拥有计算机高效运行的实用性特征，同时还致力于提高大规模程序的编程质量与程序设计语言的问题描述能力。</p>
 ]]></content>
       <categories>
-        <category>C++</category>
+        <category>编程</category>
       </categories>
       <tags>
         <tag>C++</tag>
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/08/09/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<p>请点击下方阅读更多</p>
+    <title>美化windows terminal</title>
+    <url>/2020/08/10/%E7%BE%8E%E5%8C%96windows-terminal/</url>
+    <content><![CDATA[<p><img src="http://yanxuan.nosdn.127.net/ddab7b2ef3088b1b6af19c1cea9330af.png"></img><br><font color = #00ffff size="14">前提条件</font><br>    1.安装git<br>    2.将powershell设置为可执行脚本<br>    &emsp;&emsp;下载post-git离线安装包，地址：<a href="https://files.cnblogs.com/files/xcr1234/posh-git-master.zip">https://files.cnblogs.com/files/xcr1234/posh-git-master.zip</a><br>    &emsp;&emsp;用powershell执行install.ps1<br>    &emsp;&emsp;<font color = #0099ff>管理员运行set-executionpolicy remotesigned </font></p>
+<h1 id="1、-打开powershell-执行下面代码："><a href="#1、-打开powershell-执行下面代码：" class="headerlink" title="1、 打开powershell 执行下面代码："></a>1、 打开powershell 执行下面代码：</h1><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Install-Module</span> posh<span class="literal">-git</span> <span class="literal">-Scope</span> CurrentUser</span><br><span class="line"><span class="built_in">Install-Module</span> <span class="built_in">oh</span><span class="literal">-my</span><span class="literal">-posh</span> <span class="literal">-Scope</span> CurrentUser</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>python批量爬取网页图片</title>
-    <url>/2020/08/09/python%E6%89%B9%E9%87%8F%E7%88%AC%E5%8F%96%E7%BD%91%E9%A1%B5%E5%9B%BE%E7%89%87/</url>
-    <content><![CDATA[<h2 id="python3爬虫小项目"><a href="#python3爬虫小项目" class="headerlink" title="python3爬虫小项目"></a>python3爬虫小项目</h2><a id="more"></a>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#第一步：获取要爬取的母网页的内容</span></span><br><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://www.baidu.com&quot;</span></span><br><span class="line">webPage=urllib.request.urlopen(url)</span><br><span class="line">data = webPage.read()</span><br><span class="line">data = data.decode(<span class="string">&#x27;UTF-8&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#第二步：对母网页内容处理，提取出里面的图片链接</span></span><br><span class="line">k = re.split(<span class="string">r&#x27;\s+&#x27;</span>,data)</span><br><span class="line">s = []</span><br><span class="line">sp = []</span><br><span class="line">si = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> k :</span><br><span class="line">    <span class="keyword">if</span> (re.match(<span class="string">r&#x27;src&#x27;</span>,i) <span class="keyword">or</span> re.match(<span class="string">r&#x27;href&#x27;</span>,i)):</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">not</span> re.match(<span class="string">r&#x27;href=&quot;#&quot;&#x27;</span>,i)):</span><br><span class="line">            <span class="keyword">if</span> (re.match(<span class="string">r&#x27;.*?png&quot;&#x27;</span>,i) <span class="keyword">or</span> re.match(<span class="string">r&#x27;.*?ico&quot;&#x27;</span>,i)):</span><br><span class="line">                <span class="keyword">if</span> (re.match(<span class="string">r&#x27;src&#x27;</span>,i)):</span><br><span class="line">                    s.append(i)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> it <span class="keyword">in</span> s :</span><br><span class="line">    <span class="keyword">if</span> (re.match(<span class="string">r&#x27;.*?png&quot;&#x27;</span>,it)):</span><br><span class="line">        sp.append(it)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#第三步：获取这些图片链接的内容，并保存成本地图片</span></span><br><span class="line">cnt = <span class="number">0</span></span><br><span class="line">cou = <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> it <span class="keyword">in</span> sp:</span><br><span class="line">    m = re.search(<span class="string">r&#x27;src=&quot;(.*?)&quot;&#x27;</span>,it)</span><br><span class="line">    iturl = m.group(<span class="number">1</span>)</span><br><span class="line">    print(iturl)</span><br><span class="line">    <span class="keyword">if</span> (iturl[<span class="number">0</span>]==<span class="string">&#x27;/&#x27;</span>):</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    web = urllib.request.urlopen(iturl)</span><br><span class="line">    itdata = web.read()</span><br><span class="line">    <span class="keyword">if</span> (cnt%<span class="number">3</span>==<span class="number">1</span> <span class="keyword">and</span> cnt&gt;=<span class="number">4</span> <span class="keyword">and</span> cou&lt;=<span class="number">30</span>):</span><br><span class="line">        f = open(<span class="string">&#x27;e:/0.0/py_files/image/&#x27;</span>+str(cou)+<span class="string">&#x27;.png&#x27;</span>,<span class="string">&quot;wb&quot;</span>)</span><br><span class="line">        cou = cou+<span class="number">1</span></span><br><span class="line">        f.write(itdata)</span><br><span class="line">        f.close()</span><br><span class="line">        print(it)</span><br><span class="line">    cnt = cnt+<span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
+<h1 id="2、打开C-Users-Administrator-Documents-WindowsPowerShell建立Microsoft-PowerShell-profile-ps1文本文件，在文档里输入"><a href="#2、打开C-Users-Administrator-Documents-WindowsPowerShell建立Microsoft-PowerShell-profile-ps1文本文件，在文档里输入" class="headerlink" title="2、打开C:\Users\Administrator\Documents\WindowsPowerShell建立Microsoft.PowerShell_profile.ps1文本文件，在文档里输入"></a>2、打开C:\Users\Administrator\Documents\WindowsPowerShell建立Microsoft.PowerShell_profile.ps1文本文件，在文档里输入</h1><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Import-Module</span> posh<span class="literal">-git</span></span><br><span class="line"><span class="built_in">Import-Module</span> <span class="built_in">oh</span><span class="literal">-my</span><span class="literal">-posh</span></span><br><span class="line"><span class="built_in">Set-Theme</span> PowerLine</span><br></pre></td></tr></table></figure>
+<h1 id="4、进一步美化背景"><a href="#4、进一步美化背景" class="headerlink" title="4、进一步美化背景"></a>4、进一步美化背景</h1><p>&emsp;&emsp;&emsp; 毛玻璃：”useAcrylic”: true,<br>&emsp;&emsp;&emsp; 字体：”fontFace” : “Consolas”,<br>&emsp;&emsp;&emsp;字体大小：”fontSize” : 11,<br>&emsp;&emsp;&emsp;字体颜色：”foreground” : “#FFFFFF”,<br><img src="https://cdn.nutssss.cn/wp-content/uploads/2020/06/1592084186-05.png?x-oss-process=image/resize,m_fill,w_1468,h_1502#" width="734" height="751"></img></p>
+<h1 id="5、重启Powershell"><a href="#5、重启Powershell" class="headerlink" title="5、重启Powershell"></a>5、重启Powershell</h1>]]></content>
       <categories>
-        <category>python</category>
+        <category>其他</category>
       </categories>
       <tags>
-        <tag>python</tag>
+        <tag>windows terminal</tag>
       </tags>
   </entry>
 </search>
