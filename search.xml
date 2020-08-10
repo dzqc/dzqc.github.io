@@ -17,6 +17,20 @@
       </tags>
   </entry>
   <entry>
+    <title>C++简介</title>
+    <url>/2020/08/09/C-%E7%AE%80%E4%BB%8B/</url>
+    <content><![CDATA[<p>#C++简介，请点击下方阅读全文</p>
+<a id="more"></a>
+<p> C++是C语言的继承，它既可以进行C语言的过程化程序设计，又可以进行以抽象数据类型为特点的基于对象的程序设计，还可以进行以继承和多态为特点的面向对象的程序设计。C++擅长面向对象程序设计的同时，还可以进行基于过程的程序设计，因而C++就适应的问题规模而论，大小由之。C++不仅拥有计算机高效运行的实用性特征，同时还致力于提高大规模程序的编程质量与程序设计语言的问题描述能力。</p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python批量爬取网页图片</title>
     <url>/2020/08/09/python%E6%89%B9%E9%87%8F%E7%88%AC%E5%8F%96%E7%BD%91%E9%A1%B5%E5%9B%BE%E7%89%87/</url>
     <content><![CDATA[<h2 id="python3爬虫小项目"><a href="#python3爬虫小项目" class="headerlink" title="python3爬虫小项目"></a>python3爬虫小项目</h2><a id="more"></a>
@@ -32,25 +46,12 @@
       </tags>
   </entry>
   <entry>
-    <title>C++简介</title>
-    <url>/2020/08/09/C-%E7%AE%80%E4%BB%8B/</url>
-    <content><![CDATA[<p>#C++简介，请点击下方阅读全文</p>
-<a id="more"></a>
-<p> C++是C语言的继承，它既可以进行C语言的过程化程序设计，又可以进行以抽象数据类型为特点的基于对象的程序设计，还可以进行以继承和多态为特点的面向对象的程序设计。C++擅长面向对象程序设计的同时，还可以进行基于过程的程序设计，因而C++就适应的问题规模而论，大小由之。C++不仅拥有计算机高效运行的实用性特征，同时还致力于提高大规模程序的编程质量与程序设计语言的问题描述能力。</p>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>美化windows terminal</title>
     <url>/2020/08/10/%E7%BE%8E%E5%8C%96windows-terminal/</url>
     <content><![CDATA[<p><img src="http://yanxuan.nosdn.127.net/ddab7b2ef3088b1b6af19c1cea9330af.png"></img><br><font color = #00ffff size="14">前提条件</font><br>    1.安装git<br>    2.将powershell设置为可执行脚本<br>    &emsp;&emsp;下载post-git离线安装包，地址：<a href="https://files.cnblogs.com/files/xcr1234/posh-git-master.zip">https://files.cnblogs.com/files/xcr1234/posh-git-master.zip</a><br>    &emsp;&emsp;用powershell执行install.ps1<br>    &emsp;&emsp;<font color = #0099ff>管理员运行set-executionpolicy remotesigned </font></p>
 <h1 id="1、-打开powershell-执行下面代码："><a href="#1、-打开powershell-执行下面代码：" class="headerlink" title="1、 打开powershell 执行下面代码："></a>1、 打开powershell 执行下面代码：</h1><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Install-Module</span> posh<span class="literal">-git</span> <span class="literal">-Scope</span> CurrentUser</span><br><span class="line"><span class="built_in">Install-Module</span> <span class="built_in">oh</span><span class="literal">-my</span><span class="literal">-posh</span> <span class="literal">-Scope</span> CurrentUser</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
+
 
 <h1 id="2、打开C-Users-Administrator-Documents-WindowsPowerShell建立Microsoft-PowerShell-profile-ps1文本文件，在文档里输入"><a href="#2、打开C-Users-Administrator-Documents-WindowsPowerShell建立Microsoft-PowerShell-profile-ps1文本文件，在文档里输入" class="headerlink" title="2、打开C:\Users\Administrator\Documents\WindowsPowerShell建立Microsoft.PowerShell_profile.ps1文本文件，在文档里输入"></a>2、打开C:\Users\Administrator\Documents\WindowsPowerShell建立Microsoft.PowerShell_profile.ps1文本文件，在文档里输入</h1><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Import-Module</span> posh<span class="literal">-git</span></span><br><span class="line"><span class="built_in">Import-Module</span> <span class="built_in">oh</span><span class="literal">-my</span><span class="literal">-posh</span></span><br><span class="line"><span class="built_in">Set-Theme</span> PowerLine</span><br></pre></td></tr></table></figure>
 <h1 id="4、进一步美化背景"><a href="#4、进一步美化背景" class="headerlink" title="4、进一步美化背景"></a>4、进一步美化背景</h1><p>&emsp;&emsp;&emsp; 毛玻璃：”useAcrylic”: true,<br>&emsp;&emsp;&emsp; 字体：”fontFace” : “Consolas”,<br>&emsp;&emsp;&emsp;字体大小：”fontSize” : 11,<br>&emsp;&emsp;&emsp;字体颜色：”foreground” : “#FFFFFF”,<br><img src="https://cdn.nutssss.cn/wp-content/uploads/2020/06/1592084186-05.png?x-oss-process=image/resize,m_fill,w_1468,h_1502#" width="734" height="751"></img></p>
@@ -60,6 +61,18 @@
       </categories>
       <tags>
         <tag>windows terminal</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如遇本网站加载资源失败，个人QQ：2018850341</title>
+    <url>/2020/08/11/%E5%A6%82%E9%81%87%E6%9C%AC%E7%BD%91%E7%AB%99%E5%8A%A0%E8%BD%BD%E8%B5%84%E6%BA%90%E5%A4%B1%E8%B4%A5/</url>
+    <content><![CDATA[<p><font size="10" color="#00FF00">如遇本网站加载资源失败，请刷新本页面直至不会弹出“加载资源失败”</font><br><font size="10" color="#FF0000">个人QQ：2018850341</font></p>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>个人信息</tag>
       </tags>
   </entry>
 </search>
