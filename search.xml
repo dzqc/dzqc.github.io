@@ -3,12 +3,27 @@
   <entry>
     <title>如遇本网站加载资源失败，个人QQ：2018850341</title>
     <url>/2020/08/11/%E5%A6%82%E9%81%87%E6%9C%AC%E7%BD%91%E7%AB%99%E5%8A%A0%E8%BD%BD%E8%B5%84%E6%BA%90%E5%A4%B1%E8%B4%A5/</url>
-    <content><![CDATA[<h3 id="如遇本网站加载资源失败，请刷新本页面直至不会弹出“加载资源失败”"><a href="#如遇本网站加载资源失败，请刷新本页面直至不会弹出“加载资源失败”" class="headerlink" title="如遇本网站加载资源失败，请刷新本页面直至不会弹出“加载资源失败”"></a><font color="00FF00">如遇本网站加载资源失败，请刷新本页面直至不会弹出“加载资源失败”</font></h3><h3 id="个人QQ：2018850341"><a href="#个人QQ：2018850341" class="headerlink" title="个人QQ：2018850341"></a><font color="#FF0000">个人QQ：2018850341</font></h3>]]></content>
+    <content><![CDATA[<h3 id="如遇本网站加载资源失败，请刷新本页面直至不会弹出“加载资源失败”"><a href="#如遇本网站加载资源失败，请刷新本页面直至不会弹出“加载资源失败”" class="headerlink" title="如遇本网站加载资源失败，请刷新本页面直至不会弹出“加载资源失败”"></a><font  color="00FF00">如遇本网站加载资源失败，请刷新本页面直至不会弹出“加载资源失败”</font></h3><h3 id="个人QQ：2018850341"><a href="#个人QQ：2018850341" class="headerlink" title="个人QQ：2018850341"></a><font color="#FF0000">个人QQ：2018850341</font></h3>]]></content>
       <categories>
         <category>其他</category>
       </categories>
       <tags>
         <tag>个人信息</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>把vscode加入右键菜单</title>
+    <url>/2020/08/12/%E6%8A%8Avscode%E5%8A%A0%E5%85%A5%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95/</url>
+    <content><![CDATA[<h3 id="1、在桌面建立一个add-shortcut-reg文件，注意文件后缀名是-reg，最好使用NodePad-编辑，然后保存"><a href="#1、在桌面建立一个add-shortcut-reg文件，注意文件后缀名是-reg，最好使用NodePad-编辑，然后保存" class="headerlink" title="1、在桌面建立一个add_shortcut.reg文件，注意文件后缀名是  .reg，最好使用NodePad++编辑，然后保存"></a><font color="#CC33CC">1、在桌面建立一个add_shortcut.reg文件，注意文件后缀名是  .reg，最好使用NodePad++编辑，然后保存</font></h3><a id="more"></a>
+
+<h3 id="2、在add-shortcut-reg-文件中，写入以下："><a href="#2、在add-shortcut-reg-文件中，写入以下：" class="headerlink" title="2、在add_shortcut.reg 文件中，写入以下："></a>2、在add_shortcut.reg 文件中，写入以下：</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\*\shell\VSCode]</span><br><span class="line">@&#x3D;&quot;Open with Code&quot;</span><br><span class="line">&quot;Icon&quot;&#x3D;&quot;E:\\VScode\\Microsoft VS Code\\Code.exe&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\*\shell\VSCode\command]</span><br><span class="line">@&#x3D;&quot;\&quot;E:\\VScode\\Microsoft VS Code\\Code.exe\&quot; \&quot;%1\&quot;&quot;</span><br><span class="line"></span><br><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\VSCode]</span><br><span class="line">@&#x3D;&quot;Open with Code&quot;</span><br><span class="line">&quot;Icon&quot;&#x3D;&quot;E:\\VScode\\Microsoft VS Code\\Code.exe&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\VSCode\command]</span><br><span class="line">@&#x3D;&quot;\&quot;E:\\VScode\\Microsoft VS Code\\Code.exe\&quot; \&quot;%V\&quot;&quot;</span><br><span class="line"></span><br><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\VSCode]</span><br><span class="line">@&#x3D;&quot;Open with Code&quot;</span><br><span class="line">&quot;Icon&quot;&#x3D;&quot;E:\\VScode\\Microsoft VS Code\\Code.exe&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\VSCode\command]</span><br><span class="line">@&#x3D;&quot;\&quot;E:\\VScode\\Microsoft VS Code\\Code.exe\&quot; \&quot;%V\&quot;&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="注意：其中路径改为你vscode所在路径"><a href="#注意：其中路径改为你vscode所在路径" class="headerlink" title="注意：其中路径改为你vscode所在路径"></a>注意：其中路径改为你vscode所在路径</h2><h2 id="pycharm-visual-studio-webstorm类似编辑器也可用这方法实现"><a href="#pycharm-visual-studio-webstorm类似编辑器也可用这方法实现" class="headerlink" title="pycharm,visual studio,webstorm类似编辑器也可用这方法实现"></a>pycharm,visual studio,webstorm类似编辑器也可用这方法实现</h2>]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>vscode</tag>
       </tags>
   </entry>
   <entry>
@@ -23,7 +38,7 @@
 <h1 id="4、进一步美化背景"><a href="#4、进一步美化背景" class="headerlink" title="4、进一步美化背景"></a>4、进一步美化背景</h1><p>&emsp;&emsp;&emsp; 毛玻璃：”useAcrylic”: true,<br>&emsp;&emsp;&emsp; 字体：”fontFace” : “Consolas”,<br>&emsp;&emsp;&emsp;字体大小：”fontSize” : 11,<br>&emsp;&emsp;&emsp;字体颜色：”foreground” : “#FFFFFF”,<br><img src="https://cdn.nutssss.cn/wp-content/uploads/2020/06/1592084186-05.png?x-oss-process=image/resize,m_fill,w_1468,h_1502#" width="734" height="751"></img></p>
 <h1 id="5、重启Powershell"><a href="#5、重启Powershell" class="headerlink" title="5、重启Powershell"></a>5、重启Powershell</h1>]]></content>
       <categories>
-        <category>其他</category>
+        <category>编程</category>
       </categories>
       <tags>
         <tag>windows terminal</tag>
